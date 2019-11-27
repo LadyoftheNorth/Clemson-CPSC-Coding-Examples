@@ -1,11 +1,11 @@
 /*
 * This program was created in Dr. Brian Dean's Algorithms class (CPSC 2120)
 * 
-* Candy.cpp uses the iterative refinement sorting algorithm as well as a recursive
-* algorithm to evenly sort candy into 4 bags by their weight and tasty value using 
-* the file candy.txt. The program utilizes the weight values to ensure all the bags
-* have an even amount of candy in them and then uses the ratio values 
-* to sort the candy by their tastiness.
+* Candy.cpp uses the greedy, iterative refinement, and pruned exhaustive sorting
+* algorithms to evenly sort candy into 4 bags, also known as the multiple knapsack 
+* problem, by their weight and tasty value using the file candy.txt. The program
+* utilizes the weight values to ensure all the bags have an even amount of candy 
+* in them and then uses the ratio values to sort the candy by their tastiness.
 *
 */
 
