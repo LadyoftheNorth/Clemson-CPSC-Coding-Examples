@@ -152,25 +152,29 @@ string caesarEncrypt(string input, int shift){
    for(int i = 0; i < input.length(); i++){
 	//If uppercase, calculate the new letter using the shift
 	if(isupper(input[i])){
-	  char cur = input[i] + shift;
+	  int cur = input[i] + shift;
 	  
 	  //If the letter after shifting is out of alphabetic range,
 	  //subtract and add the numeric values of Z and A to bring it in range
 	  if(cur > 'Z') cur = cur -'Z' + 'A' - 1;
 
-	  result += cur;
+	  char resultCur = cur;
+
+	  result += resultCur;
 	}
 	//If lowercase, perform the same calculation but 
 	//different values to reach the lowercase values in ASCII
 	else if(islower(input[i])){
-
-	  char cur = input[i] + shift;
+	  
+	  int cur = input[i] + shift;
 
           //If the letter after shifting is out of alphabetic range,
           //subtract and add the numeric values of z and a to bring it in range
 	  if(cur > 'z') cur = cur - 'z' + 'a' - 1;
 
-	  result += cur;
+	  char resultCur = cur;
+
+	  result += resultCur;
 	}
 	//If any punctuation or spaces are detected,
 	//just add them into the result
@@ -187,24 +191,28 @@ string caesarDecrypt(string input, int shift){
    for(int i = 0; i < input.length(); i++){
         //If uppercase, calculate the new letter using the shift
         if(isupper(input[i])){
-           char cur = input[i] - shift;
+           int cur = input[i] - shift;
 
 	   //If the letter after shifting is out of alphabetic range,
            //subtract and add the numeric values of Z and A to bring it in range
 	   if(cur < 'A') cur = cur + 'Z' - 'A' + 1;
 
-	   result += cur;
+	   char resultCur = cur;
+
+	   result += resultCur;
         }
         //If lowercase, perform the same calculation but
         //different values to reach the lowercase values in ASCII
         else if(islower(input[i])){
-           char cur = input[i] - shift;
+           int cur = input[i] - shift;
 	
 	   //If the letter after shifting is out of alphabetic range,
            //subtract and add the numeric values of z and a to bring it in range
 	   if(cur < 'a') cur = cur + 'z' - 'a' + 1;
 
-	   result += cur;
+	   char resultCur = cur;
+
+	   result += resultCur;
         }
         //If any punctuation or spaces are detetced,
         //just add them into the result
